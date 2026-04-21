@@ -1,5 +1,3 @@
-# Ejercicio 4: Remover elementos en posiciones específicas
-
 def remove_elements(lista):
     """
     Remueve el primer, quinto y sexto elemento de la lista.
@@ -11,11 +9,22 @@ def remove_elements(lista):
     Returns:
         La lista después de remover los elementos indicados
     """
-    if not lista:
-        return None
-    maximo = lista[0]
-    for numero in lista[1:]:
-        if numero > maximo:
-            maximo = numero
-    return maximo
+    elementos_lista = len(lista)
 
+    if elementos_lista >= 6:
+        del lista[0]
+        del lista[4]
+        del lista[3]
+        return lista
+
+    if elementos_lista == 5:
+        del lista[0]
+        del lista[2]
+        return lista
+
+    if elementos_lista != 0 and elementos_lista < 5:
+        del lista[0]
+        return lista
+
+    if elementos_lista == 0:
+        return lista
