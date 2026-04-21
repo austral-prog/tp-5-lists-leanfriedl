@@ -11,4 +11,11 @@ def remove_elements(lista):
     Returns:
         La lista después de remover los elementos indicados
     """
-    pass  # Reemplazar con tu implementación
+    if not lista:
+        return None
+    maximo = lista[0]
+    for numero in lista[1:]:
+        if numero > maximo:
+            maximo = numero
+    return maximo
+
